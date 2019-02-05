@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mToysListTextView = (TextView) findViewById(R.id.tv_toy_names);
-        String[] toys = ToyBox.getToyNames();
-        for (String element : toys) {
-            mToysListTextView.setText(String.format("%s%s\n", mToysListTextView.getText(), element));
+        String[] toyNames = ToyBox.getToyNames();
+        for (String toyName : toyNames) {
+            mToysListTextView.append(toyName + "\n\n\n");
         }
     }
 }
